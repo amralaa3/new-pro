@@ -8,7 +8,12 @@
         <li><a href="{{ url('admin/view-categories') }}">View Categories</a></li>
       </ul>
     </li>
-    <li> <a href="charts.html"><i class="icon icon-signal"></i> <span>Charts &amp; graphs</span></a> </li>
+    <li class="submenu"> <a href="#"><i class="icon icon-th-list"></i> <span>Admin</span> <span class="label label-important">2</span></a>
+      <ul>
+        <li><a href="{{ url('admin/add-admin') }}">Add Admin</a></li>
+        <li><a href="{{ url('admin/view-admins') }}">View Admins</a></li>
+      </ul>
+    </li>
     <li> <a href="widgets.html"><i class="icon icon-inbox"></i> <span>Widgets</span></a> </li>
     <li><a href="tables.html"><i class="icon icon-th"></i> <span>Tables</span></a></li>
     <li><a href="grid.html"><i class="icon icon-fullscreen"></i> <span>Full width</span></a></li>

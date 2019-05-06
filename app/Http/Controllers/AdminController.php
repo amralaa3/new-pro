@@ -16,9 +16,9 @@ class AdminController extends Controller
 {
     public function login(Request $request)
     {
-    	if($request->isMethod('post')){
-    		$data = $request->input();
-    		if(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'1'])){
+        if($request->isMethod('post')){
+           $data = $request->input();
+           if(Auth::attempt(['email'=>$data['email'],'password'=>$data['password'],'admin'=>'1'])){
     			
                // Session::put('adminSession',$data['email']);
                 return redirect('/admin/dashboard');
@@ -60,7 +60,7 @@ class AdminController extends Controller
         }
     }
 
-public function updatePassword(Request $request){
+    public function updatePassword(Request $request){
         if($request->isMethod('post')){
             $data = $request->all();
             //echo "<pre>"; print_r($data); die;
@@ -76,4 +76,11 @@ public function updatePassword(Request $request){
         }
     }
 
+    public function getAdminPage(){
+        return view('admin.registeration.add_admin');
+    }
+
+    public function addAdmin(){
+        dd('tab shit');
+    }
 }

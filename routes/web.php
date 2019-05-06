@@ -30,6 +30,8 @@ Route::match(['get','post'],'/admin/edit-category/{id}','CategoryController@edit
 Route::match(['get','post'],'/admin/delete-category/{id}','CategoryController@deleteCategory');
 Route::get('/admin/view-categories','CategoryController@viewCategories');
 Route::match(['get','post'],'/admin/add-product','ProductsController@addProduct');
+Route::get('/admin/add-admin','AdminController@getAdminPage');
+Route::post('/admin/add-addmin','AdminController@addAdmin');
 });
 
 
